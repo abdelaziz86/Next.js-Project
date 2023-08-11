@@ -10,7 +10,7 @@ export default async function Home() {
         <h1 className="text-2xl font-bold">Todo List App</h1>
         <AddTask />
       </div>
-      <ToDoList />
+      <ToDoList tasks={tasks} />
     </main> 
   )
 }
