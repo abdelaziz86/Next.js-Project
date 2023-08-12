@@ -9,13 +9,19 @@ const AddTask = () => {
 
     const handleSubmitNewToDo : FormEventHandler<HTMLFormElement> = async (e) => {
         e.preventDefault();
-        await addTodo({
-            id : '3',
+        try {
+            const newTask = await addTodo({
+            id : "3",
             text: newTaskValue 
         });
+            console.log("New task added:", newTask);
+        } catch (error) {
+            console.error("Error adding task:", error);
+        }
+ 
         setNewTaskValue(""); 
         setShowModal(false);
-        
+
     }
     
 
