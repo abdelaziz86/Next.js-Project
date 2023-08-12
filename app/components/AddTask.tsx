@@ -4,6 +4,7 @@ import Modal from './Modal';
 import { FormEventHandler, useState } from 'react';
 import { addTodo } from '@/api';
 import { useRouter } from "next/navigation";
+import { v4 } from 'uuid';
 // ... (import statements)
 
 const AddTask = () => {
@@ -17,7 +18,7 @@ const AddTask = () => {
 
         try {
             const newTask = await addTodo({
-                id: "6",
+                id: v4,
                 text: newTaskValue,
             });
             console.log("New task added:", newTask);
