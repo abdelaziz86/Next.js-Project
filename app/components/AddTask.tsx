@@ -18,7 +18,7 @@ const AddTask = () => {
 
         try {
             const newTask = await addTodo({
-                id: v4,
+                id: v4(),
                 text: newTaskValue,
             });
             console.log("New task added:", newTask);
