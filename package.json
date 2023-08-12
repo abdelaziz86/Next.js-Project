@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "json-server" : "json-server --watch data/todos.json --port 3001"
+    "json-server": "json-server --watch data/todos.json --port 3001"
   },
   "dependencies": {
     "@types/node": "20.4.9",
@@ -19,7 +19,8 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.10.1",
-    "typescript": "5.1.6"
+    "typescript": "5.1.6",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.14",
