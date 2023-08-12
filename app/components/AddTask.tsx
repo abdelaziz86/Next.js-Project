@@ -4,6 +4,12 @@ import Modal from './Modal';
 import { useState } from 'react';
 const AddTask = () => {
     const [showModal, setShowModal] = useState(false);
+
+    const handleSubmitNewToDo = (e) => {
+        e.preventDefault();
+    }
+    
+    
     return (<div>
         <button onClick={() => { setShowModal(true) }} className="btn btn-primary w-full">
             Add new Task
@@ -11,7 +17,13 @@ const AddTask = () => {
         </button>
 
         <Modal modalOpen={showModal} setShowModal={setShowModal}>
-            Modal for add todo
+            <form onSubmit={handleSubmitNewToDo}>
+                <h3 className='font-bold text-lg'>Add new task</h3>
+                <div className='modal-action'>
+                    <input type="text" placeholder="Type here" className="input input-bordered w-full" />
+                </div>
+                <button type='submit' className='btn'>Submit</button>
+            </form>
         </Modal>
     </div>); 
 }
