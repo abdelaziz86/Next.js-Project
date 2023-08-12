@@ -1,6 +1,5 @@
 const Modal = () => {
-    return (<>
-        <button className="btn" onClick={()=>window.my_modal_3.showModal()}>open modal</button>
+    return (<> 
         <dialog id="my_modal_3" className="modal">
         <form method="dialog" className="modal-box">
             <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
